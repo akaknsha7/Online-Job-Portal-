@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Courgette&display=swap");
+.container-fluid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+.box {
+  width: 25rem;
+  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #3b2667 10%, #bc78ec 100%);
+  border-radius: 0.625rem;
+  box-shadow: 0 0.5em 0.5em -0.4em rgb(59, 38, 103);
+}
+
+.box h2 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Marck Script", cursive;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+  font-family: "Courgette", cursive;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: tomato;
+  font-size: 0.75rem;
+}
+.box .inputBox input:focus,
+.box .inputBox input:valid {
+  border-bottom: 0.065rem solid tomato;
+}
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em black;
+  transform: translateY(-0.25em);
+}
+
+.box input[type="submit"],
+input[type="submit"],
+.btn {
+  transition: 0.25s;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: tomato;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+  font-family: "Courgette", cursive;
+}
+
+/* 
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
+} */
+
+@media (min-width: 700px) {
+  container-fluid {
+    min-width: 400px;
+  }
+}
